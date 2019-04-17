@@ -60,8 +60,8 @@ namespace ScannerApplication
                                     XmlAttributeCollection statusAttributes = node.Attributes;
                                     foreach (XmlAttribute a in statusAttributes)
                                     {
-                                        if (a.Name.Equals("code")) status.errorNumber = int.Parse(a.Value);
-                                        if (a.Name.Equals("desc")) status.errorMessage = a.Value;
+                                        if (a.Name.Equals("errorNumber")) status.errorNumber = int.Parse(a.Value);
+                                        if (a.Name.Equals("errorMessage")) status.errorMessage = a.Value;
                                     }
 
                                     continue;

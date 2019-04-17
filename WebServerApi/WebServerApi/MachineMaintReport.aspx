@@ -106,7 +106,7 @@
         </div>
         <div class="row">
             <div class="col-10 offset-1">
-                <asp:TextBox runat="server" ID="TextBoxError" Visible="false"></asp:TextBox>
+                <asp:TextBox runat="server" CssClass="form-control" ID="TextBoxError" Visible="false"></asp:TextBox>
             </div>
         </div>
     </form>

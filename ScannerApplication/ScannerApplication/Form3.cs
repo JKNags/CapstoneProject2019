@@ -123,35 +123,26 @@ namespace ScannerApplication
                 return false;
             }
 
-            if (newPartQuantity < 1)
-            {
-                //MessageBox.Show("Part quantity must be more than 1.", "Input Error");
-                //return false;
-
-                // Remove part
-                string key = "";
-                foreach (string k in newParts.Keys)
-                {
-                    if (k.Equals(newPart))
-                    {
-                        key = k;
-                        break;
-                    }
-                }
-                if (key.Equals("")) return true;
-                newParts.Remove(key);
-                return true;
-            }
-
             // Add new part to existing
             foreach (string part in ScannerData.parts.Keys)
             {
                 if (part.Equals(newPart))
                 {
-                    ScannerData.parts[part] += newPartQuantity;
+                    // Remove part if input quantity is 0 or addition will result in 0
+                    if (newPartQuantity == 0 || newParts[part] + newPartQuantity <= 0)
+                        newParts.Remove(part);
+                    else
+                        ScannerData.parts[part] += newPartQuantity;
                     ScannerData.parts = newParts;
                     return true;
                 }
+            }
+
+            if (newPartQuantity < 0)
+            {
+                System.Diagnostics.Debug.Write("New part quantity must be greater than 0.\n");
+                MessageBox.Show("New part quantity must be greater than 0.", "Input Error");
+                return false;
             }
 
             // Add new part
