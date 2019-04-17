@@ -86,8 +86,7 @@ namespace WebServerApi
                 }
             } catch (Exception e)
             {
-                TextBoxError.Visible = true;
-                TextBoxError.Text = "Error: " + e.Message;
+                SetErrorMessage("Error: " + e.Message);
             }
         }
 
@@ -113,8 +112,7 @@ namespace WebServerApi
             }
             catch (Exception e)
             {
-                TextBoxError.Visible = true;
-                TextBoxError.Text = "Error: " + e.Message;
+                SetErrorMessage("Error: " + e.Message);
             }
         }
 
@@ -122,6 +120,8 @@ namespace WebServerApi
         {
             GridViewMachineMaintParts.DataSource = null;
             GridViewMachineMaintParts.DataBind();
+
+            ClearErrorMessage();
         }
 
         private void ClearFields()
@@ -129,6 +129,20 @@ namespace WebServerApi
             TextBoxMachine.Text = "";
             TextBoxWorkOrder.Text = "";
             TextBoxEmployee.Text = "";
+
+            ClearErrorMessage();
+        }
+
+        private void SetErrorMessage(string msg)
+        {
+            TextBoxError.Text = msg;
+            TextBoxError.Visible = true;
+        }
+
+        private void ClearErrorMessage()
+        {
+            TextBoxError.Text = "";
+            TextBoxError.Visible = false;
         }
 
         #endregion
