@@ -154,14 +154,14 @@ namespace ScannerApplication
         {
             Form1 form1 = new Form1();
             form1.Show();
-            Hide();
+            this.Hide();
         }
 
         private void RedirectForm3()
         {
             Form3 form3 = new Form3();
             form3.Show();
-            Hide();
+            this.Hide();
         }
 
         #endregion

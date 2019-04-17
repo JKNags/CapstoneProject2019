@@ -43,6 +43,7 @@ namespace WebServerApi
         protected void ButtonClear_Click(object sender, EventArgs e)
         {
             ClearFields();
+            SelectMaintenance();
         }
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)

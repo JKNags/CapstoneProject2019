@@ -142,12 +142,30 @@ namespace ScannerApplication
         {
             Form2 form2 = new Form2();
             form2.Show();
-            Hide();
+            this.Hide();
         }
 
         #endregion
 
         #region Events
+
+        private void TextBoxMachine_TextChanged(object sender, EventArgs e)
+        {
+            //if (CheckBoxScanMode.Checked)
+            //    TextBoxWorkOrder.Focus();
+        }
+
+        private void TextBoxWorkOrder_TextChanged(object sender, EventArgs e)
+        {
+            //if (CheckBoxScanMode.Checked)
+            //    TextBoxEmployee.Focus();
+        }
+
+        private void TextBoxEmployee_TextChanged(object sender, EventArgs e)
+        {
+            //if (CheckBoxScanMode.Checked)
+            //    ButtonScanIn.Focus();
+        }
 
         private void ButtonScanIn_Click(object sender, EventArgs e)
         {

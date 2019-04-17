@@ -49,8 +49,8 @@ namespace ScannerApplication
             ListViewParts.Location = new Point(screenWidth / 2 - ListViewParts.Width / 2,
                 LabelTitle.Location.Y + LabelTitle.Height + labelTextBoxSeparation);
 
-            ListViewParts.Columns.Add("Part", (int)(ListViewParts.Width * 0.8 - 1), HorizontalAlignment.Center);
-            ListViewParts.Columns.Add("Qty", (int)(ListViewParts.Width * 0.2), HorizontalAlignment.Center);
+            ListViewParts.Columns.Add("Part", (int)(ListViewParts.Width * 0.75 - 1), HorizontalAlignment.Center);
+            ListViewParts.Columns.Add("Qty", (int)(ListViewParts.Width * 0.20), HorizontalAlignment.Left);
 
             // Parts Input
             TextBoxPart.Width = (int)(screenWidth * 0.7);
@@ -77,7 +77,7 @@ namespace ScannerApplication
         {
             Form2 form2 = new Form2();
             form2.Show();
-            Hide();
+            this.Hide();
         }
 
         private void SelectPart()

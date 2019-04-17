@@ -46,6 +46,7 @@
             this.TextBoxMachine.Name = "TextBoxMachine";
             this.TextBoxMachine.Size = new System.Drawing.Size(26, 23);
             this.TextBoxMachine.TabIndex = 1;
+            this.TextBoxMachine.TextChanged += new System.EventHandler(this.TextBoxMachine_TextChanged);
             // 
             // ButtonScanIn
             // 
@@ -83,6 +84,7 @@
             this.TextBoxWorkOrder.Name = "TextBoxWorkOrder";
             this.TextBoxWorkOrder.Size = new System.Drawing.Size(26, 23);
             this.TextBoxWorkOrder.TabIndex = 3;
+            this.TextBoxWorkOrder.TextChanged += new System.EventHandler(this.TextBoxWorkOrder_TextChanged);
             // 
             // LabelWorkOrder
             // 
@@ -98,6 +100,7 @@
             this.TextBoxEmployee.Name = "TextBoxEmployee";
             this.TextBoxEmployee.Size = new System.Drawing.Size(26, 23);
             this.TextBoxEmployee.TabIndex = 8;
+            this.TextBoxEmployee.TextChanged += new System.EventHandler(this.TextBoxEmployee_TextChanged);
             // 
             // LabelEmployee
             // 

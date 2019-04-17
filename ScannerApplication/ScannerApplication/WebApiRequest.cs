@@ -10,7 +10,7 @@ namespace ScannerApplication
 {
     class WebApiRequest
     {
-        private const string ApiUrl = "http://192.168.0.11/DbApiv1/api/db";
+        private const string ApiUrl = "http://10.200.172.247//DbApiv1/api/db";//192.168.0.11/DbApiv1/api/db";
 
         public static Status ApiPostRequest(string requestData)
         {
